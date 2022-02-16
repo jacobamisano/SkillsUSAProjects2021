@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grocery List App</title>
+	<link rel="stylesheet" href="GroceryList.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="GroceryList.js"></script>
+</head>
+<body>
+	<h2>Welcome</h2>
+	<p>Welcome to the Grocery List Application! Please fill out the information below. Items marked with a <span id="reqMark">*</span> are required. The current Items within the list will appear at the bottom of the screen. Each substitute item will be related to the above grocery item. Coupons can be related to any item within the list. Grocery items <b>are case sensitive</b> when trying to edit or remove them.</p>
+	<h2>Grocery Item</h2>
+	<!--Form for grocery item input -->
+	<form id="gItem">
+		<label for="gItemName"><span id="reqMark">* </span>Item Name:</label>
+		<input type="text" id="gItemName" name="gItemName">
+		<span id="gItemNameError" class="errorDisplay"></span>
+		<br>
+
+		<label for="gItemQuantity"><span id="reqMark">* </span>Quantity:</label>
+		<input type="text" id="gItemQuantity" name="gItemQuantity">
+		<span id="gItemQuantityError" class="errorDisplay"></span>
+		<br>
+
+		<label for="gItemPrice"><span id="reqMark">* </span>Price:</label>
+		<input type="text" id="gItemPrice" name="gItemPrice">
+		<span id="gItemPriceError" class="errorDisplay"></span>
+		<br>
+	</form>
+
+<!-- START EDIT FORMS-->
+	<span id="editForms" class="disabled">
+		<h1>Edit Values</h1>
+		<h2>Edit Grocery Items</h2>
+		<form id="editgItem">
+			<label for="editgItemName"><span id="reqMark">* </span>Item Name:</label>
+			<input type="text" id="editgItemName" name="editgItemName">
+			<span id="editgItemNameError" class="errorDisplay"></span>
+			<br>
+
+			<label for="editgItemQuantity"><span id="reqMark">* </span>Quantity:</label>
+			<input type="text" id="editgItemQuantity" name="editgItemQuantity">
+			<span id="editgItemQuantityError" class="errorDisplay"></span>
+			<br>
+
+			<label for="editgItemPrice"><span id="reqMark">* </span>Price:</label>
+			<input type="text" id="editgItemPrice" name="editgItemPrice">
+			<span id="editItemPriceError" class="errorDisplay"></span>
+			<br>
+		</form>
+
+	</span>
+	<!-- END EDIT FORMS -->
+	<!--Form for changing between adding,removing and editing. The button related to the current mode will be grayed out-->
+	<form id="modeSelect">
+		<h2>Currently <span id="currentMode">Adding</span> Items</h2>
+		<input type="button" id="submit" value="Submit"><br>
+		<input type="button" id="clear" value="Clear Selections"><br>
+		<input type="button" id="calculate" value="Calculate Total"><br>
+
+		<input type="button" id="addMode" value="Change to Adding Mode" class="disabled"><br>
+		<input type="button" id="removeMode" value="Change to Removing Mode"><br>
+		<input type="button" id="editMode" value="Change to Edit Mode">
+	</form>
+
+
+
+	<!--Items added to the grocery list and currently within the grocery list will appear below in order for the user to see currently changable items-->
+	<h2>Grocery List</h2>
+	<dl id="gList">
+
+	</dl>
+
+	<h2>Coupon List</h2>
+	<dl id="coupList">
+
+	</dl>
+
+	<h2>Totals</h2>
+	<span id="totals"></span>
+
+
+</body>
+</html>

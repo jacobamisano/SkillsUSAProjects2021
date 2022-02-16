@@ -1,0 +1,13 @@
+#reqMark{
+	color:red;
+
+}
+h2{
+	text-decoration: underline;
+}
+.errorDisplay{
+	color:red;
+}
+.disabled{
+	display:none;
+}

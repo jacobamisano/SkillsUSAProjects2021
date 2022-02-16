@@ -1,0 +1,27 @@
+#introText{
+	width: 60%;
+	color: blue;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	border: 1px solid black;
+	padding: 2px;
+	border: 1px solid black;
+}
+
+.userIn{
+	padding-left: 10px;
+	padding-right: 10px;
+	border:  1px solid black;
+}
+#gameBoard{
+	margin-left: auto;
+	margin-right: auto;
+}
+#currents{
+	font-weight: bold;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
